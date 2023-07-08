@@ -1,0 +1,1 @@
+{"robots":[{"x":12,"y":1,"tokens":"infinite","orientation":0,"_prev_x":11,"_prev_y":1,"_prev_orientation":3}],"walls":{"2,1":["east"],"4,1":["east"],"6,1":["east"],"8,1":["east"],"10,1":["east"],"12,1":["east"]},"goal":{"position":{"x":12,"y":1}}}
