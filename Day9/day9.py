@@ -107,43 +107,62 @@
 # add_new_country("Russia", 2, ["Moscow", "Saint Petersburg"])
 # print(travel_log)
 
-from art import logo
-import os
-clear = lambda: os.system('clear')
+# from art import logo
+# import os
+# clear = lambda: os.system('clear')
 
-print(logo)
-print("Welcome to secret auction Program by Davies Amedeus")
+# print(logo)
+# print("Welcome to secret auction Program by Davies Amedeus")
 
-def find_highest_bidder(auction_dictionary):
-    highest_bid =0
-    winner = ""
+# def find_highest_bidder(auction_dictionary):
+#     highest_bid =0
+#     winner = ""
 
-    for bidder in auction_dictionary:
-        bid__amount = auction_dictionary[bidder]
-        if bid__amount > highest_bid:
-            highest_bid = bid__amount
-            winner = bidder
-        print(f"The winner is {winner} with a bid of ${highest_bid}")
+#     for bidder in auction_dictionary:
+#         bid__amount = auction_dictionary[bidder]
+#         if bid__amount > highest_bid:
+#             highest_bid = bid__amount
+#             winner = bidder
+#         print(f"The winner is {winner} with a bid of ${highest_bid}")
 
 
-auction_dictionary = {}
-bid_direction = True
+# auction_dictionary = {}
+# bid_direction = True
 
-while bid_direction ==True:
-    name = input("Enter Your Name: ")
-    bid_price = int(input("What's your bid price in Tsh: "))
+# while bid_direction ==True:
+#     name = input("Enter Your Name: ")
+#     bid_price = int(input("What's your bid price in Tsh: "))
 
-    auction_dictionary[name] = bid_price
-    print(auction_dictionary)
+#     auction_dictionary[name] = bid_price
+#     print(auction_dictionary)
 
-    continue_qn = input("Is there other who wants to bid: ").lower()
-    if continue_qn == "no":
-        bid_direction = False
-        find_highest_bidder(auction_dictionary)
+#     continue_qn = input("Is there other who wants to bid: ").lower()
+#     if continue_qn == "no":
+#         bid_direction = False
+#         find_highest_bidder(auction_dictionary)
 
-    elif continue_qn == "yes":
-        clear()
-        bid_direction = True
+#     elif continue_qn == "yes":
+#         clear()
+#         bid_direction = True
     
-    else:
-        bid_direction = False
+#     else:
+#         bid_direction = False
+
+
+auction_record = {
+    "Davies": 100,
+    "Edgar": 700,
+    "Mariana": 200
+}
+
+
+highest_bid = 0
+highest_bidder = ""
+
+for name in auction_record:
+
+    if auction_record[name] > highest_bid:
+        highest_bid = auction_record[name]
+        highest_bidder = name
+
+print(f"The highest bid is {highest_bid} by {highest_bidder}")
